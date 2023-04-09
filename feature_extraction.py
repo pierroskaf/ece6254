@@ -65,7 +65,7 @@ def get_rms(x):
     return librosa.feature.rms(y=x)
 
 def get_length(x,sr):
-    return x/sr
+    return list(np.shape(x))[0]/sr
 
 def get_mfccs(x,sr):
     return preprocessing.scale(librosa.feature.mfcc(y=x, sr=sr), axis=1)
@@ -159,17 +159,12 @@ def extract_all_features(song_path):
     # Add the song features to the feature list
     features.append(line)
 
-
 for genre_folder in tqdm(glob(os.path.join(path, '*'))):
     # print(genre_folder)
     # print(genre_folder.split("/")[2])
     for song_path in glob(os.path.join(genre_folder,'*.wav')):
-        # try:
         extract_all_features(song_path)
-        # except 
-    # with Pool(10) as p:
-    #     p.map(extract_all_features,glob(os.path.join(genre_folder,'*.wav')))
-
+        
 data = pd.DataFrame(features,columns=["filename","length","chroma_stft_mean","chroma_stft_var",
     "rms_mean","rms_var","spectral_centroid_mean","spectral_centroid_var",
     "spectral_bandwidth_mean","spectral_bandwidth_var","rolloff_mean",
