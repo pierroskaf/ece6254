@@ -9,5 +9,5 @@ Repository for the final project
 ### Feature Extraction
 1. ``conda activate keras_env``
 1. Edit script to load the data from the correct folder
-1. ``python3.10 feature_extraction.py
+1. ``python3.10 feature_extraction.py``
 
