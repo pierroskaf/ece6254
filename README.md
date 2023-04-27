@@ -9,7 +9,8 @@ Repository for the final project for the class ECE6254 - Statistical Machine Lea
 
 ### Feature Extraction & Data Preparation
 1. Edit script to load the data from the correct folder
-1. ``python3.10 feature_extraction.py``
+1. To extract the features of the whole song samples ``python3.10 feature_extraction.py``
+1. To select specific time samples, run ``pyhton3.10 feature_extraction_select_duration.py``
 1. Run cells in ``image_prepr.ipynb``
 
 ### Training & Testing
