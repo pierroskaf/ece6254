@@ -1,5 +1,5 @@
-# ece6254
-Repository for the final project
+# Final Project
+Repository for the final project for the class ECE6254 - Statistical Machine Learning
 
 ### Setup
 1. Install Anaconda
